@@ -1,0 +1,127 @@
+/* カスタムスタイル */
+
+/* フォーカス時のアニメーション */
+.focus\:ring-2:focus {
+    animation: focus-ring 0.2s ease-in-out;
+}
+
+@keyframes focus-ring {
+    0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.5); }
+    100% { box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); }
+}
+
+/* ボタンのホバーエフェクト */
+button {
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* テーブルの行ホバーエフェクト */
+#assets-tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+
+
+/* ローディングスピナー */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 成功・エラーメッセージ */
+.message {
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.message.success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+.message.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+/* 金額のフォーマット */
+.amount {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+}
+
+
+
+/* レスポンシブデザインの改善 */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    table {
+        font-size: 0.875rem;
+    }
+    
+    th, td {
+        padding: 8px 4px;
+    }
+}
+
+/* ダークモード対応（将来の拡張用） */
+@media (prefers-color-scheme: dark) {
+    /* ダークモードのスタイルをここに追加 */
+}
+
+/* アクセシビリティの改善 */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* スクロールバーのカスタマイズ */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+} 
