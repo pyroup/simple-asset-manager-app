@@ -33,7 +33,6 @@ pip install -r requirements.txt
 ```env
 FLASK_ENV=development
 DATABASE_URL=sqlite:///assets.db
-SECRET_KEY=your-secret-key
 ```
 
 ### 3. データベーススキーマの実装

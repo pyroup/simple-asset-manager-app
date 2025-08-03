@@ -5,7 +5,6 @@ load_dotenv()
 
 class Config:
     """基本設定クラス"""
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'dev-secret-key'
     DEBUG = False
 
 class DevelopmentConfig(Config):
