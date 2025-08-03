@@ -1,0 +1,11 @@
+{
+    "appService.deploySubpath": "hands-on",
+    "appService.zipIgnorePattern": [
+        "__pycache__{,/**}",
+        "*.pyc",
+        ".venv{,/**}",
+        ".git{,/**}",
+        ".vscode{,/**}",
+        "*.db"
+    ]
+}
